@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activities.MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme        ="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignRight="@id/divider_view"
+                android:layout_alignParentLeft="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/random_recs"
+                    android:gravity="center"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:id="@+id/vp_randoms">
+                </androidx.viewpager.widget.ViewPager>
+
+                <LinearLayout
+                    android:id="@+id/slider_dots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal">
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_view"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_centerHorizontal="true">
+            </View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignLeft="@id/divider_view"
+                android:layout_alignParentRight="true"
+                android:padding="12dp">
+
+                <Button
+                    android:id="@+id/favorites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:drawableLeft="@drawable/ic_favorite_black_24dp"
+                    android:text="@string/favs"
+                    android:paddingLeft="16dp"
+                    android:layout_margin="5dp"/>
+
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:drawableLeft="@drawable/ic_search_black_24dp"
+                    android:text="@string/search"
+                    android:paddingLeft="16dp"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/categories"
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_dark"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_categories"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

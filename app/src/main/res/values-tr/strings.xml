@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RecipeApp</string>
+    <string name="action_help">Yardım</string>
+    <string name="action_rateus">Puan Verin</string>
+    <string name="action_settings">Ayarlar</string>
+    <string name="add_favorites">Favorilere Ekle</string>
+    <string name="categories">Kategoriler</string>
+    <string name="favs">Favoriler</string>
+    <string name="random_recs">Rastgele Öneriler</string>
+    <string name="search">Ara</string>
+    <string name="searchHint">Yemek Ara</string>
+    <string name="ingredients">Malzemeler</string>
+    <string name="instructions">Tarif</string>
+
+</resources>

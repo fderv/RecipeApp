@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width ="match_parent"
+    android:layout_height="match_parent">
+
+    <ListPreference
+        android:title        ="Language"
+        android:key          ="language"
+        android:defaultValue ="english"
+        android:entryValues  ="@array/language_values"
+        android:entries      ="@array/language_options">
+    </ListPreference>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="allowNotifications"
+        android:title="Allow Notifications" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="darkMode"
+        android:title="Dark Mode" />
+
+    <ListPreference
+        android:title="Preferred notification time"
+        android:key="notTime"
+        android:defaultValue="20"
+        android:entryValues="@array/times"
+        android:entries="@array/times_shown">
+    </ListPreference>
+
+</PreferenceScreen>
